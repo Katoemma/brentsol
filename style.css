@@ -1,0 +1,45 @@
+/*colors used: primary=#cca300, background= white, font= black + #cca300*/
+body{
+    font-family: 'roboto';
+    width: 375px; 
+    margin-top: 0px;
+    margin-left: 0px;
+    border-bottom: 3px solid #2eb82e;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    position: sticky;
+}
+.logo img{
+    width: 50px;
+    height: 50px;
+}
+.nav-links{
+    display: none;
+    flex-direction: column;
+    gap: 50px;
+    position: fixed;
+    margin-top: 0px;
+    left: 0px;
+    align-items: center;
+    background-color: rgb(204, 163, 0, 0.8);
+    width: 21em;
+    height: 100%;
+}
+.nav-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2.5em;
+    list-style: none;
+    align-items: center;
+}
+.nav-list li a{
+    text-decoration: none;
+    font-size: 30px;
+}
+.nav-list li a:hover{
+    color: #ffffff;
+}
