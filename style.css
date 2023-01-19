@@ -163,6 +163,29 @@ main{
     background-color: #e2dfdf;
     border-radius: 9px;
 }
+/*styling the contact us  page*/
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+#email-input{
+    padding: 10px;
+    border: 1px solid #2eb82e;
+    border-radius: 5px;
+}
+textarea{
+    border: 1px solid #2eb82e;
+    border-radius: 5px;
+}
+#submit-btn{
+    padding: 8px;
+    background-color: #2eb82e;
+    border-radius: 5px;
+    border: 1px solid #2eb82e;
+    color: #ffffff;
+    font-size: 17px;
+}
 /*styling the footer*/
 footer{
     padding: 20px;
@@ -207,7 +230,6 @@ footer{
     left: 300px;
     background-color: #2eb82e;
     border-radius: 10px;
-    z-index: 5 ;
 }
 .upbtn{
     width: 50px;
