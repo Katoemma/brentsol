@@ -11,14 +11,14 @@
 <body>
     <nav>
         <div class="logo"> 
-            <img src="images/assets/logo.png" alt="logo">
+            <a href="#"><img src="images/assets/logo.png" alt="logo"></a>
         </div>
         <span id="menuIcon" onclick="openNav()"><img src="images/assets/menu icon.png" alt="menu"></span>
         <div class="nav-links" id="navLinks">
             <span onclick="closeNav()" class="menu-close"><img src="images/assets/close_menu.png" alt=""></span>
             <div class="nav-list">
                 <li class="nav-link" onclick="closeBar()"><a href="#"> Home</a></li>
-                <li class="nav-link" onclick="closeBar()"><a href="#"> Sizing</a></li>
+                <li class="nav-link" onclick="closeBar()"><a href="/pages/sizing.html"> Sizing</a></li>
                 <li class="nav-link" onclick="closeBar()"><a href="#"> Shop</a></li>
                 <li class="nav-link" onclick="closeBar()"><a href="#about-us"> About us</a></li>
                 <li class="nav-link" onclick="closeBar()"><a href="#contact-us"> Contact us</a></li>
@@ -41,7 +41,7 @@
                 <h1 style="color: #15dd15;">Off-Grid Sizing</h1>
                 <p style="font-size: 17px; color:#ffffff">This website supports sizing of small off-grid solar systems.<br> We mainly target household solar systems</p>
                 <span style="color: #15dd15;">Click on the button below to size for free</span><br>
-                <a href="#"><button id="sizingBtn"><img style="width:25px" src="images/assets/baseline_flag_circle_black_24dp.png"> Size Now</button></a>
+                <a href="/pages/sizing.html"><button id="sizingBtn"><img style="width:25px" src="images/assets/baseline_flag_circle_black_24dp.png"> Size Now</button></a>
             </div>
             <div class="Page" id="shopPage">
                 <h1 style="color: #15dd15;">Our Shop</h1>
@@ -150,8 +150,8 @@
         </div>
         <hr>
         <div class="copyright">copyright &copy; BrentSolar2022</div>
-        <div class="go-upbtn">
-            <a href="#"><img class="upbtn" src="images/assets/sharp_arrow_upward_black_24dp.png" alt=""></button></a>
+        <div class="go-upbtn" onclick="scrollToTop()">
+            <img class="upbtn" src="images/assets/sharp_arrow_upward_black_24dp.png" alt=""></button>
         </div>
     </footer>
     <script src="index.js"></script>
