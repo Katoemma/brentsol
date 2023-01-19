@@ -31,3 +31,14 @@ main{
     border-radius: 4px;
     padding: 5px;
 }
+#added-items{
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+#added-items li{
+    list-style: none;
+    color: #0a0a0a;
+    font-size: 17px;
+}
