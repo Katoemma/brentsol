@@ -6,18 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>off grid solar sizing</title>
     <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/sizing.css">
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
 </head>
 <body>
     <nav>
         <div class="logo"> 
-            <img src="../images/assets/logo.png" alt="logo">
+          <a href="../index.html"><img src="../images/assets/logo.png" alt="logo"></a>
         </div>
         <span id="menuIcon" onclick="openNav()"><img src="../images/assets/menu icon.png" alt="menu"></span>
         <div class="nav-links" id="navLinks">
             <span onclick="closeNav()" class="menu-close"><img src="../images/assets/close_menu.png" alt=""></span>
             <div class="nav-list">
-                <li class="nav-link" onclick="closeBar()"><a href="#"> Home</a></li>
+                <li class="nav-link" onclick="closeBar()"><a href="../index.html"> Home</a></li>
                 <li class="nav-link" onclick="closeBar()"><a href="#"> Sizing</a></li>
                 <li class="nav-link" onclick="closeBar()"><a href="#"> Shop</a></li>
                 <li class="nav-link" onclick="closeBar()"><a href="#about-us"> About us</a></li>
@@ -25,5 +26,132 @@
             </div>
         </div>
     </nav>
+    <main>
+        <div class="page">
+            <div class="size-welcome-text">
+                <h1 style="color: #15dd15;">Size your solar now</h1>
+                <p>Let's Go</p>
+            </div>
+            <div class="sizing-forms">
+                <p style="color: #15dd15;">Fill in the fields below</p>
+                <div class="appliance-field">
+                    <div class="Appliance-input" id="appliances">
+                        <p><u>Appliance(Load)</u></p>
+                        <div class="inputs">
+                            <input type="text" name="" id="appliance" placeholder="Appliance" style="width: 120px; border:1px solid #15dd15; border-radius:4px;">
+                            <input type="number" name="" class="smallwidth-input" id="quantity" placeholder="Quantity">
+                            <input type="number" name="" class="smallwidth-input" id="rating" placeholder="rating">
+                            <input type="number" name="" class="smallwidth-input" id="working-hours" placeholder="hours">
+                            <button id="add-btn">Add</button>
+                        </div>
+                        <ul class="appliance-list" id="added-items">
+                            <li>Hello</li>
+                            <li>Hello</li>
+                            <li>Hello</li>
+                            <li>Hello</li>
+                            <li>Hello</li>
+                            <li>Hello</li>
+                            <li>Hello</li>
+                            <li>Hello</li>
+                            <li>Hello</li>
+                            <li>Hello</li>
+                            <li>Hello</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="appliance-field">
+                    <div class="Appliance-input">
+                        <p><u>System Performance</u></p>
+                        overall Efficiency(%):<input type="number" min="0" max="100" class="smallwidth-input" name="" id="appliance" placeholder="eg.70%"><br>
+                        Days of Autonomy(days):<input type="number" min="0" max="100" class="smallwidth-input" name="" id="quantity" placeholder="e.g 4"><br>
+                        Depth of discharge(%):<input type="number" min="0" max="100" class="smallwidth-input" name="" id="rating" placeholder="e.g 50%"><br>
+                        Peak sun Hours(hours):<input type="number" min="0" max="100" class="smallwidth-input" name="" id="working-hours" placeholder="e.g 5"><br>
+                        System Voltage(v): <input type="number" min="0" max="100" class="smallwidth-input" name="" id="system-voltage" placeholder="eg. 12v">
+                    </div>
+                </div>
+                <div class="appliance-field">
+                    <div class="Appliance-input">
+                        <p><u>Available battery(ies) specification</u></p>
+                        Capacity:<input type="number" min="0" max="100" class="smallwidth-input" name="" id="appliance" placeholder="e.g 200Ah">Ah <br>
+                        Voltage:<input type="number" min="0" max="100" class="smallwidth-input" name="" id="quantity" placeholder="e.g 12">V
+                    </div>
+                </div>
+                <div class="appliance-field">
+                    <div class="Appliance-input">
+                        <p><u>Available solar panel(s) specification</u></p>
+                        Isc:<input type="number" name="" min="0" max="100" class="smallwidth-input" id="appliance" placeholder="Appliance"><br>
+                        Voc:<input type="number" name="" min="0" max="100" class="smallwidth-input" id="quantity" placeholder="Quantity"><br>
+                        Imax<input type="number" name="" min="0" max="100" class="smallwidth-input" id="rating" placeholder="rating"> <br>
+                        Vmax:<input type="number" name="" min="0" max="100"class="smallwidth-input" id="working-hours" placeholder="hours"><br>
+                        Pmax:<input type="number" name="" min="0" max="100" class="smallwidth-input" id="working-hours" placeholder="hours">                                                                                                               
+                    </div>
+                </div>
+
+            </div>
+            <div class="system-output">
+                <h1>Your sizing:</h1>
+                <div class="output">
+                    <h5>Battery bank</h5>
+                    <div class="final-output">
+                        In parallel: <p id="parallel-batt-total"></p><br>
+                        In series: <p id="series-batt-total"></p><br>
+                        Batteries required: <p id="final-batt"></p>
+                    </div>
+                </div>
+                <div class="output">
+                    <h5>Solar panels/ module</h5>
+                    <div class="final-output">
+                        In parallel: <p id="parallel-sol-total"></p><br>
+                        In series: <p id="series-sol-total"></p><br>
+                        Panels required: <p id="final-sol"></p>
+                    </div>
+                </div>
+                <div class="output">
+                    <h5>Charge Controller</h5>
+                    <div class="final-output">
+                        C.C required: <p id="final-cc"></p>
+                    </div>
+                </div>
+                <div class="output">
+                    <h5>Inverter</h5>
+                    <div class="final-output">
+                        Inverter required: <p id="final-invt"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!--this is the footer-->
+    <footer>
+        <div class="navigation">
+            <ul>
+                <li><a href="#">Home |</a></li>
+                <li><a href="#">Sizing | </a></li>
+                <li><a href="#">Shop | </a></li>
+                <li><a href="#">About |</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footerData">
+            <div class="socialMedia">
+                <p>Follow us</p>
+                <div class="social-links">
+                    <a href="#"><img src="../images/assets/facebook.png" alt=""></a>
+                    <a href="#"><img id="imgwid" src="../images/assets/instagram.png" alt=""></a>
+                    <a href="#"><img src="../images/assets/twitter logo.png" alt=""></a>
+                    <a href="#"><img id="imgwid" src="../images/assets/youtube logo.png" alt=""></a>
+                </div>
+            </div>
+            <div class="address">
+                Located: Gulu City,<br> Northern Uganda.<br>
+                plot 23, juba Rd.<br>
+                Tel: <a href="tel:+256778707801">+256778707801</a>
+                or<br>
+                Tel: <a href="tel:+256778707801">+256778707801</a>
+            </div>
+        </div>
+        <hr>
+        <div class="copyright">copyright &copy; BrentSolar2022</div>
+    </footer>
     <script src="../index.js"></script>
 </body>
