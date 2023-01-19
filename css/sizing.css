@@ -1,0 +1,33 @@
+main{
+    background-image: none;
+}
+.sizing-forms{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+#appliances .inputs{
+    display: flex;
+    gap: 6px;
+}
+#appliances .inputs button{
+    background-color: #15dd15;
+    color: #ffffff;
+    border: 1px solid #15dd15;
+    border-radius: 2px;
+    padding: 5px;
+}
+.appliance-list{
+    background-color: #b6b3b3;
+}
+.Appliance-input{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.smallwidth-input{
+    width: 40px;
+    border: 1px solid #15dd15;
+    border-radius: 4px;
+    padding: 5px;
+}
