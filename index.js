@@ -1,7 +1,7 @@
 var navLinks = document.getElementById("navLinks");
 var menuIcon = document.getElementsById("menuIcon");
 function openNav(){
-    navLinks.style.height = "100%";
+    navLinks.style.height = "100vh";
     menuIcon.style.display = "none";
     document.getElementById("animText").style.display ="none";
 
@@ -14,8 +14,10 @@ function closeNav(){
 function closeBar(){
     navLinks.style.height ="0";
 }
-//animating the welcome text
-window.onload = function(){
-    var textAnimation = document.getElementById("animText");
-    textAnimation.innerHTML = "lets size your Solar";
-};
+//Scrool to top on clicking the back to top button
+function scrollToTop(){
+    window.scrollTo({
+        top:0,
+        behavior: 'smooth'
+    });
+}
