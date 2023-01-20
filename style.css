@@ -171,11 +171,11 @@ form{
 }
 #email-input{
     padding: 10px;
-    border: 1px solid #2eb82e;
+    border: 3px solid #2eb82e;
     border-radius: 5px;
 }
 textarea{
-    border: 1px solid #2eb82e;
+    border: 3px solid #2eb82e;
     border-radius: 5px;
 }
 #submit-btn{

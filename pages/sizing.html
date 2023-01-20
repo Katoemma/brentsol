@@ -35,28 +35,24 @@
             <div class="sizing-forms">
                 <p style="color: #15dd15;">Fill in the fields below</p>
                 <div class="appliance-field">
-                    <div class="Appliance-input" id="appliances">
+                    <div class="Appliance-input" id="appliances" style="gap: 10px;">
                         <p><u>Appliance(Load)</u></p>
-                        <div class="inputs">
+                        <form id="sizing-inputs" class="inputs" netlify>
                             <input type="text" name="" id="appliance" placeholder="Appliance" style="width: 120px; border:1px solid #15dd15; border-radius:4px;">
                             <input type="number" name="" class="smallwidth-input" id="quantity" placeholder="Quantity">
                             <input type="number" name="" class="smallwidth-input" id="rating" placeholder="rating">
                             <input type="number" name="" class="smallwidth-input" id="working-hours" placeholder="hours">
                             <button id="add-btn">Add</button>
-                        </div>
-                        <ul class="appliance-list" id="added-items">
-                            <li>Hello</li>
-                            <li>Hello</li>
-                            <li>Hello</li>
-                            <li>Hello</li>
-                            <li>Hello</li>
-                            <li>Hello</li>
-                            <li>Hello</li>
-                            <li>Hello</li>
-                            <li>Hello</li>
-                            <li>Hello</li>
-                            <li>Hello</li>
-                        </ul>
+                        </form>
+                        <table class="appliance-list" id="added-items">
+                           <tr style="width:100%;padding-left:5px; padding-right:5px">
+                            <th>Appliance |</th>
+                            <th>Quantity |</th>
+                            <th>Rating(W) |</th>
+                            <th>Hours(h)</th>
+                           </tr>
+                           <!--the added appliance list to appear here-->
+                        </table>
                     </div>
                 </div>
                 <div class="appliance-field">

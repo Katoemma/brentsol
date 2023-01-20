@@ -6,8 +6,9 @@ main{
     flex-direction: column;
     gap: 40px;
 }
-#appliances .inputs{
+.inputs{
     display: flex;
+    flex-direction: row;
     gap: 6px;
 }
 #appliances .inputs button{
@@ -18,7 +19,13 @@ main{
     padding: 5px;
 }
 .appliance-list{
-    background-color: #b6b3b3;
+    border: 2px solid #15dd15;
+    border-radius: 5px;
+    background-color: #e2dfdf;
+}
+.appliance-list tr{
+    display: flex;
+    justify-content: space-between;
 }
 .Appliance-input{
     display: flex;
