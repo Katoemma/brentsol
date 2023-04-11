@@ -4,156 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>off grid solar sizing</title>
-    <link rel="stylesheet" href="css/output.css">
-    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <title>solar sizing</title>
+    <link rel="stylesheet" href="/css/output.css">
 </head>
 <body>
-    <nav>
-        <div class="logo"> 
-            <a href="#"><img src="images/assets/logo.png" alt="logo"></a>
+    <!--nav bar-->
+    <nav class="flex justify-between px-4 bg-grayish lg:bg-black">
+
+        <!--logo-->
+        <div class="p-4">
+            <img src="images/assets/logo.png" alt="logo" class="w-16 ">
         </div>
-        <span id="menuIcon" onclick="openNav()"><img src="images/assets/menu icon.png" alt="menu"></span>
-        <div class="nav-links" id="navLinks">
-            <span onclick="closeNav()" class="menu-close"><img src="images/assets/close_menu.png" alt=""></span>
-            <div class="nav-list">
-                <li class="nav-link" onclick="closeBar()"><a href="#"> Home</a></li>
-                <li class="nav-link" onclick="closeBar()"><a href="pages/sizing.html"> Sizing</a></li>
-                <li class="nav-link" onclick="closeBar()"><a href="#"> Shop</a></li>
-                <li class="nav-link" onclick="closeBar()"><a href="#about-us"> About us</a></li>
-                <li class="nav-link" onclick="closeBar()"><a href="#contact-us"> Contact us</a></li>
-            </div>
+        <!--nav links container-->
+        <div class="hidden p-4 pt-20 lg:flex lg:gap-10 lg:pt-6 lg:text-white lg:text-2xl">
+            <li class="text-center  list-none hover:text-greener"><a href="#">Home</a></li>
+            <li class="text-center  list-none hover:text-greener lg:text-greener"><a href="#">Sizing</a></li>
+            <li class="text-center  list-none hover:text-greener"><a href="#">Contact</a></li>
+            <li class="text-center  list-none hover:text-greener"><a href="#">About</a></li>
         </div>
-    </nav>    
-    <main>
-        <div class="hero-page">
-            <div class="hero-img">
-                <img src="images/hero image.jpg" alt="hero image">
-                <h1 class="welcome-txt">Let's <span id="animText">Go Renewable</span></h1>
-            </div>
-            <div class="intro">
-                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, sem euismod euismod congue, magna velit pellentesque velit, quis aliquam tellus augue euismod nisl. Curabitur id bibendum mi. Sed viverra enim at augue tincidunt, in posuere elit gravida. Sed id ipsum id elit pharetra convallis."</p>
-                <h5>lets size your small offgrid system </h5>
-            </div>
+        <!--mobile hamburger menu container and get started button -->
+        <div class="flex align-center p-4">
+            <img src="images/assets/menu icon.png" alt="open menu" class="h-10 lg:hidden">
+            <img src="images/assets/close_menu.png" alt="close menu" class="hidden h-10">
+            <!--get started button -->
+            <a class="hidden lg:block mt-3" href="#"><button class="px-6 py-2 bg-greener hover:bg-white hover:text-greener rounded-2xl text-white text-xl">size now</button></a>
         </div>
-        <div class="essential-page">
-            <div class="Page" id="sizingPage">
-                <h1 style="color: #15dd15;">Off-Grid Sizing</h1>
-                <p style="font-size: 17px; color:#ffffff">This website supports sizing of small off-grid solar systems.<br> We mainly target household solar systems</p>
-                <span style="color: #15dd15;">Click on the button below to size for free</span><br>
-                <a href="/pages/sizing.html"><button id="sizingBtn"><img style="width:25px" src="images/assets/baseline_flag_circle_black_24dp.png"> Size Now</button></a>
-            </div>
-            <div class="Page" id="shopPage">
-                <h1 style="color: #15dd15;">Our Shop</h1>
-                <p style="font-size: 17px; ">Shop all the off-grid solar sytems for Your houseHold<br> Buy quality Solar Batteries, panels and Charge Controllers etc...</p>
-                <div class="product-imgs">
-                    <img src="images/battery.jpg" alt="">
-                    <img src="images/charge controller 1.jpg" alt="">
-                    <img src="images/inertdd.jpg" alt="">
-                </div>
-                <a href="#"><button id="sizingBtn"><img style="width:25px" src="images/assets/outline_shopping_cart_black_24dp.png"> Shop Now</button></a>
-            </div>
-        </div>
-        <div class="Page" id="about-us">
-            <div class="about-heading">
-                <h1 style="color: #15dd15;">About Us</h1>
-            </div>
-            <div class="description">
-                <p>We are the Leading suppliers of off-grid household solar systems in Noerthern Uganda</p>
-                <p>Our shop is located in Gulu City along Juba Road</p>
-            </div>
-            <div class="animate-numbers">
-                <div class="box">
-                    <h1>20</h1>
-                    <h3>Customers</h3>
-                </div>
-                <div class="box">
-                    <h1>20</h1>
-                    <h3>Services</h3>
-                </div>
-                <div class="box">
-                    <h1>10</h1>
-                    <h3>Shops</h3>
-                </div>
-            </div>
-            <div class="testimonial">
-                <h2>What our customers say</h2>
-                <div class="testimonials">
-                    <div class="testimonial-1">
-                        <img style="width: 70px; height:70px; border-radius:50%;" src="images/assets/testimonial-avatar.jpg" alt="avatar">
-                        <p>This is the best offgrid sizing website ever ,<br><span style="font-weight:600">Nicole. A. (USA)</span></p>
-                    </div>
-                    <div class="testimonial-1">
-                        <img style="width: 70px; height:70px; border-radius:50%;" src="images/assets/testimonial-avatar.jpg" alt="avatar">
-                        <p>This is the best offgrid sizing website ever ,<br><span style="font-weight:600">Nicole. A. (USA)</span></p>
-                    </div>
-                    <div class="testimonial-1">
-                        <img style="width: 80px; height:70px; border-radius:50%;" src="images/assets/testimonial-avatar.jpg" alt="avatar">
-                        <p>This is the best offgrid sizing website ever ,<br><span style="font-weight:600">Nicole. A. (USA)</span></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="Page" id="contact-us">
-            <div class="contact-heading">
-                <h1 style="color: #15dd15;">Contact Us</h1>
-            </div>
-            <div class="email">
-                <p>To communicate with our company, send us an email for any inquiries</p>
-                <form action="">
-                    <label for="email">Email</label><br>
-                    <input type="email" name="email" id="email-input" placeholder="Enter your email"><br>
-                    <label for="message">Message</label><br>
-                    <textarea name="message" id="textarea" cols="30" rows="10" placeholder="enter your message"></textarea> <br>
-                    <span><input type="checkbox" name="" id="">subscribe for daily updates.</span> <br>
-                    <button id="submit-btn">Send Message</button><br>
-                </form>
-            </div>
-            <div class="socialMedia">
-                <p>you can also follow us on social media</p>
-                <div class="social-links">
-                    <a href="#"><img src="images/assets/facebook.png" alt=""></a>
-                    <a href="#"><img id="imgwid" src="images/assets/instagram.png" alt=""></a>
-                    <a href="#"><img src="images/assets/twitter logo.png" alt=""></a>
-                    <a href="#"><img id="imgwid" src="images/assets/youtube logo.png" alt=""></a>
-                </div>
-            </div>
-        </div>
-    </main>
-    <footer>
-        <div class="navigation">
-            <ul>
-                <li><a href="#">Home |</a></li>
-                <li><a href="#">Sizing | </a></li>
-                <li><a href="#">Shop | </a></li>
-                <li><a href="#">About |</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </div>
-        <div class="footerData">
-            <div class="socialMedia">
-                <p>Follow us</p>
-                <div class="social-links">
-                    <a href="#"><img src="images/assets/facebook.png" alt=""></a>
-                    <a href="#"><img id="imgwid" src="images/assets/instagram.png" alt=""></a>
-                    <a href="#"><img src="images/assets/twitter logo.png" alt=""></a>
-                    <a href="#"><img id="imgwid" src="images/assets/youtube logo.png" alt=""></a>
-                </div>
-            </div>
-            <div class="address">
-                Located: Gulu City,<br> Northern Uganda.<br>
-                plot 23, juba Rd.<br>
-                Tel: <a href="tel:+256778707801">+256778707801</a>
-                or<br>
-                Tel: <a href="tel:+256778707801">+256778707801</a>
-            </div>
-        </div>
-        <hr>
-        <div class="copyright">copyright &copy; BrentSolar2022</div>
-        <div class="go-upbtn" onclick="scrollToTop()">
-            <img class="upbtn" src="images/assets/sharp_arrow_upward_black_24dp.png" alt=""></button>
-        </div>
-    </footer>
-    <script src="index.js"></script>
+    </nav>
+    <!--end of navigation bar-->
+
+    <!--sizin container-->
 </body>
 </html>

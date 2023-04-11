@@ -2,21 +2,16 @@
 module.exports = {
   content: ["./*.html"],
   theme: {
-    screens: {
-      'md': '768px',
+    screens:{
+      'md': '487px',
       'lg': '1024px',
-      'xl': '1280px',
-      '2xl': '1536',
+      'xl' : '1224px'
     },
     colors:{
-      'greenish': '#15dd15',
-      'bgGrayish': '#e2dfdf'
-    },
-    backgroundImage:{
-
-    },
-    backgroundColor:{
-
+      'white': '#ffffff',
+      'greener': '#33cc33',
+      'grayish': '#f5f5f0',
+      'black': '#000000'
     },
     extend: {},
   },
