@@ -72,5 +72,5 @@ function addList(){
     TotalBB.innerHTML = Math.floor((BBcapacity / batteryCapacity) * (systemVoltage / batteryVoltage)); //total batteries required
 
     let efficiencyFactor = 1 / (OverallEfficiency / 100);
-    CCrating.innerHTML = (totalCurrent / Imax) * efficiencyFactor * ISC;
+    CCrating.innerHTML = Math.floor((totalCurrent / Imax) * efficiencyFactor * ISC);
 }
