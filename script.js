@@ -62,7 +62,7 @@ function addList(){
     let totalCurrent = peakPower / systemVoltage;
     
     SPParallel.innerHTML = totalCurrent / Imax; //pv modules in parallel
-    SPSeries.innerHtml = systemVoltage / Vmax; //pv modules in series
+    SPSeries.innerHTML = systemVoltage / Vmax; //pv modules in series
     TotalSP.innerHTML = Math.floor((totalCurrent / Imax) * (systemVoltage / Vmax)); //total modules required;
 
     let BBcapacity = (dailyEnergyRequired * DOA) / (systemVoltage * (DOD / 100)); //battery bank capacity
