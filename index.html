@@ -17,8 +17,8 @@
         </div>
         <!--nav links container-->
         <div class="hidden p-4 pt-20 lg:flex lg:gap-10 lg:pt-6 lg:text-white lg:text-2xl">
-            <li class="text-center  list-none hover:text-greener"><a href="#">Home</a></li>
-            <li class="text-center  list-none hover:text-greener lg:text-greener"><a href="#">Sizing</a></li>
+            <li class="text-center  list-none hover:text-greener lg:text-greener"><a href="#">Home</a></li>
+            <li class="text-center  list-none hover:text-greener"><a href="public/sizing.html">Sizing</a></li>
             <li class="text-center  list-none hover:text-greener"><a href="#">Contact</a></li>
             <li class="text-center  list-none hover:text-greener"><a href="#">About</a></li>
         </div>
@@ -33,129 +33,7 @@
     <!--end of navigation bar-->
 
     <!--sizing container-->
-    <div class="flex flex-col p-4 text-white" style="
-    background: linear-gradient(27deg, rgba(20,12,55,1) 0%, rgba(8,179,148,0.6) 60%, rgba(186,8,142,1) 100%);">
-        <!--intro text-->
-        <div class="flex">
-            <p class="text-xl">This is for small offgrid systems only DC. It will require the user to know the available solar modules and battery specifications.</p>
-        </div>
-        <!--the input and output sections container -->
-        <div class="flex flex-col justify-between pt-6 lg:flex-row lg:px-12">
-            <!--input section-->
-            <section>
-                <!--input form-->
-                <form action="" class="flex justify-between py-4 text-black">
-                    <input type="text" id="appliance" placeholder="appliance" class="border-2 border-greener rounded-xl p-2 w-24 lg:w-52">
-                    <input type="number" id="quantity" placeholder="quantity" class="border-2 border-greener rounded-xl p-2 w-16 lg:w-24">
-                    <input type="number" id="rating" placeholder="rating" class="border-2 border-greener rounded-xl p-2 w-16 lg:w-24">
-                    <input type="number" id="hours" placeholder="hours" class="border-2 border-greener rounded-xl p-2 w-16 lg:w-24">
-
-                    <button type="button" class="bg-greener px-4 rounded-xl" onclick="addList()">Add</button>
-                </form>
-                <!--input list table-->
-                <table id="table" class="border-2 border-greener rounded-2xl" style="background: linear-gradient(90deg, rgba(251,63,76,1) 0%, rgba(31,8,240,1) 100%);">
-                    <thead class="">
-                        <tr class="">
-                            <th class="bg-grayish px-2 text-black">Appliance</th>
-                            <th class="px-2">Quantity</th>
-                            <th class="bg-grayish px-2 text-black">Rating(W)</th>
-                            <th class="px-2">Hours(h)</th>
-                        </tr>
-                    </thead>
-                </table>
-            </section>
-
-            <!--specification section-->
-            <section>
-                <!--system performance div-->
-                <div class="flex flex-col">
-                    <h2 class="text-xl font-bold underline">System performance</h2>
-                    <div class="pt-4 flex flex-col">
-                        <label for="efficiency">Overall Efficiency(%)</label>
-                        <input type="number" class="border-2 rounded-xl border-greenish text-black" id="overAllEfficiency" placeholder="eg. 50">
-
-                        <label for="efficiency">Days of Autonomy(days)</label>
-                        <input type="number" class="border-2 rounded-xl border-greenish text-black" id="DOA" placeholder="eg. 4">
-
-                        <label for="efficiency">Depth of discharge(%)</label>
-                        <input type="number" class="border-2 rounded-xl border-greenish text-black" id="DOD" placeholder="eg. 50">
-
-                        <label for="efficiency">Peak Sun Hours (hours)</label>
-                        <input type="number" class="border-2 rounded-xl border-greenish text-black" id="PSH" placeholder="eg. 2">
-
-                        <label for="efficiency">system voltage</label>
-                        <input type="number" class="border-2 rounded-xl border-greenish text-black" id="systemVoltage" placeholder="eg. 12">
-                    </div>
-                </div>
-
-                <div class="flex flex-col">
-                    <h2 class="text-xl font-bold underline">Preffered battery(ies) specification</h2>
-                    <div class="pt-4 flex flex-col">
-                        <label for="capacity">Capacity (Ah)</label>
-                        <input type="number" class="border-2 rounded-xl border-greenish text-black" id="batteryCapacity" placeholder="eg. 100">
-
-                        <label for="voltage">Voltage (V)  </label>
-                        <input type="number" class="border-2 rounded-xl border-greenish text-black" id="batteryVoltage" placeholder="eg. 12">
-                    </div>
-                </div>
-                <div class="flex flex-col">
-                    <h2 class="text-xl font-bold underline">Preffered solar module specification</h2>
-                    <div class="pt-4 flex flex-col">
-                        <label for="efficiency">Isc</label>
-                        <input type="number" class="border-2 rounded-xl border-greenish text-black" id="ISC" placeholder="eg. 2.5">
-
-                        <label for="efficiency">Voc</label>
-                        <input type="number" class="border-2 rounded-xl border-greenish text-black" id="VOC" placeholder="eg. 4">
-
-                        <label for="efficiency">I max</label>
-                        <input type="number" class="border-2 rounded-xl border-greenish text-black" id="Imax" placeholder="eg. 50">
-
-                        <label for="efficiency">V max</label>
-                        <input type="number" class="border-2 rounded-xl border-greenish text-black" id="Vmax" placeholder="eg. 2">
-
-                        <label for="efficiency">P max</label>
-                        <input type="number" class="border-2 rounded-xl border-greenish text-black" id="Pmax" placeholder="eg. 12">
-                    </div>
-                </div>
-            </section>
-
-            <!--sizing output section-->
-            <section>
-                <h1 class="text-xl font-bold">Your sizing output</h1>
-                <div class="flex flex-col">
-                    <div class="flex flex-col">
-                        <h2 class="underline">Battery Bank</h2>
-                        <br>
-                        <p>In parallel :<span class="font-bold" id="BBParallel">00</span></p>
-                        <p>In Series :<span class="font-bold" id="BBSeries">00</span></p>
-                        <br>
-                        <p>Total batteries required :<span class="font-bold" id="TotalBB">00</span></p>
-                    </div>
-
-                    <div class="flex flex-col">
-                        <h2 class="underline">solar modules</h2>
-                        <br>
-                        <p>In parallel :<span class="font-bold" id="SPParallel">00</span></p>
-                        <p>In Series :<span class="font-bold" id="SPSeries">00</span></p>
-                        <br>
-                        <p>Total modules required :<span class="font-bold" id="TotalSP">00</span></p>
-                    </div>
-
-                    <div class="flex flex-col">
-                        <h2 class="underline">Charge Controller</h2>
-                        <br>
-                        <p>Charge controller required :<span class="font-bold" id="CCrating">00</span></p>
-                    </div>
-
-                    <div class="flex flex-col">
-                        <h2 class="underline">Inverter</h2>
-                        
-                        <p>Inverter rating required :<span class="font-bold" id="inverterRating"></span></p>
-                    </div>
-                </div>
-            </section>
-        </div>
-    </div>
+    
     <script src="script.js"></script>
 </body>
 </html>
