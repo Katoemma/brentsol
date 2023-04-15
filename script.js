@@ -1,3 +1,15 @@
+//mmobile menu trigger js
+function opennav(){
+    document.getElementById("navLinks").style.display = "block";
+    document.getElementById("openMenu").style.display = "none";
+    document.getElementById("closeMenu").style.display = "block";
+}
+
+function closeNav(){
+    document.getElementById("navLinks").style.display = "none";
+    document.getElementById("openMenu").style.display = "block";
+    document.getElementById("closeMenu").style.display = "none";
+}
 var totalEnergy = 0;
 
 function addList(){
