@@ -9,14 +9,14 @@
 </head>
 <body>
     <!--nav bar-->
-    <nav class="flex justify-between px-4 bg-grayish lg:bg-black">
+    <nav class="fixed top-0 w-full flex z-20 justify-between px-4 bg-grayish lg:bg-black">
 
         <!--logo-->
         <div class="p-4">
             <img src="images/assets/logo.png" alt="logo" class="w-16 ">
         </div>
         <!--nav links container-->
-        <div class="hidden p-4 pt-20 lg:flex lg:gap-10 lg:pt-6 lg:text-white lg:text-2xl">
+        <div class="hidden p-4 pt-20 lg:flex lg:gap-10 lg:pt-6 lg:text-white lg:text-2xl" id="navLinks">
             <li class="text-center  list-none hover:text-greener lg:text-greener"><a href="#">Home</a></li>
             <li class="text-center  list-none hover:text-greener"><a href="public/sizing.html">Sizing</a></li>
             <li class="text-center  list-none hover:text-greener"><a href="#">Contact</a></li>
@@ -24,13 +24,25 @@
         </div>
         <!--mobile hamburger menu container and get started button -->
         <div class="flex align-center p-4">
-            <img src="images/assets/menu icon.png" alt="open menu" class="h-10 lg:hidden">
-            <img src="images/assets/close_menu.png" alt="close menu" class="hidden h-10">
+            <img src="images/assets/menu icon.png" alt="open menu" id="openMenu" class="h-10 lg:hidden" onclick="openNav()">
+            <img src="images/assets/close_menu.png" alt="close menu" id="closeMenu" class="hidden h-10" onclick="closeNav()">
             <!--get started button -->
             <a class="hidden lg:block mt-3" href="#"><button class="px-6 py-2 bg-greener hover:bg-white hover:text-greener rounded-2xl text-white text-xl">size now</button></a>
         </div>
     </nav>
     <!--end of navigation bar-->
+    <!--bg image-->
+    <div class="absolute z-0 h-screen w-full">
+        <img src="images/bestBG.jpg" alt="bg img" class="w-full h-screen">
+    </div>
+    <!-- home page container-->
+    <div class="relative flex w-full h-screen flex-col z-10" style="background: rgb(1, 0, 0, 0.6);">
+        <div class="z-20">
+            <h1 class="text-white text-2xl">Hello every one</h1>
+        </div>
+        <h1 class="text-white text-2xl">Hello every one</h1>
+    </div>
+    
 
     <!--sizing container-->
     
